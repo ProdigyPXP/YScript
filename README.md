@@ -5,9 +5,9 @@
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C1DI4VL)
 
 [![yoptascript](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-YoptaScript-green)](https://github.com/samgozman/YoptaScript/tree/master/dist/yopta.js)
-[![npm](https://img.shields.io/npm/v/yopta)](https://www.npmjs.com/package/yopta)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/samgozman/YoptaScript/issues)
-[![contributions welcome](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/samgozman/YoptaScript/blob/master/LICENSE.txt)
+[![npm](https://img.shields.io/npm/v/@ppxp/yopta)](https://www.npmjs.com/package/@ppxp/yopta)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ProdigyPXP/YScript/issues)
+[![license](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/ProdigyPXP/YScript/blob/master/LICENSE.txt)
 
 [YoptaScript](http://yopta.space/) это первый в мире скриптовый язык программирования для гопников и реальных пацанов, транслируемый в чистый JavaScript. YoptaScript позволит "чётким пацанам" быстро влиться в ряды программистов и процесс разработки.
 
@@ -78,13 +78,13 @@ YoptaScript содержит **множество нецензурной лек�
 
 ### NodeJS
 
-**YoptaScript** можно так же подключить для вашего проекта с помощью пакетного менеджера **npm**.
+**YoptaScript** можно так же подключить для вашего проекта с помощью пакетного менеджера **pnpm**.
 
 ```bash
-npm install yopta
+pnpm install yopta
 ```
 
-или введите `npm install -g yopta` чтобы установить йопту глобально.
+или введите `pnpm install -g yopta` чтобы установить йопту глобально.
 
 ## Проекты на YoptaScript
 
