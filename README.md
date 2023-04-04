@@ -1,13 +1,15 @@
-# YoptaScript
+# YScript
+### A flavor of [YoptaScript](https://github.com/samgozman/YoptaScript) maintained by [ProdigyPXP](https://github.com/ProdigyPXP)
 
 [![yoptascript logo](./docs/assets/img/YoptaScript.png)](https://yopta.space/)
 
+Support original author
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C1DI4VL)
 
-[![yoptascript](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-YoptaScript-green)](https://github.com/samgozman/YoptaScript/tree/master/dist/yopta.js)
-[![npm](https://img.shields.io/npm/v/@ppxp/yopta)](https://www.npmjs.com/package/@ppxp/yopta)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ProdigyPXP/YScript/issues)
-[![license](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/ProdigyPXP/YScript/blob/master/LICENSE.txt)
+[![yoptascript](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-YoptaScript-green?style=for-the-badge)](https://github.com/samgozman/YoptaScript/tree/master/dist/yopta.js)
+[![npm](https://img.shields.io/npm/v/@ppxp/yopta?style=for-the-badge)](https://www.npmjs.com/package/@ppxp/yopta)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge)](https://github.com/ProdigyPXP/YScript/issues)
+[![license](https://img.shields.io/packagist/l/doctrine/orm.svg?style=for-the-badge)](https://github.com/ProdigyPXP/YScript/blob/master/LICENSE.txt)
 
 [YoptaScript](http://yopta.space/) это первый в мире скриптовый язык программирования для гопников и реальных пацанов, транслируемый в чистый JavaScript. YoptaScript позволит "чётким пацанам" быстро влиться в ряды программистов и процесс разработки.
 
