@@ -1,11 +1,22 @@
 // @ts-check
+if (!process.argv[2]) {
+  console.error("\nBuild failed.")
+  console.error("You must provide a build target (ex. pnpm build esnext).")
+  process.exit(0);
+}
+
+
 import * as esbuild from "esbuild";
 import fs from "fs";
 import { fileURLToPath } from "url";
 import path from "path";
-const version = "2.1.0";
 
-const distro = process.argv[2];
+
+/** @type string */
+const version = JSON.parse(fs.readFileSync("./package.json", "utf8"))["version"];
+
+// 'prod'/'production' => 'esnext'
+const distro = process.argv[2].startsWith("prod") ? "esnext" : process.argv[2];
 let build = true;
 
 
@@ -26,8 +37,6 @@ let target = "esnext";
 
 switch (distro) {
   case "esnext":
-  case "prod":
-  case "production":
     outfile += "yscript-esnext.min.js";
     break;
 

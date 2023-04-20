@@ -1,11 +1,10 @@
 {
     "name": "@ppxp/yopta",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "description": "YSCript - язык программирования для гопников и реальных пацанов.",
     "main": "dist/yscript.min.js",
-    "types": "dist/index.d.ts",
     "scripts": {
-        "prebuild": "ts-node src/dictionary/prepareArrayBeforeBuild.ts",
+        "prebuild": "cd scripts && sh prebuild.sh",
         "build": "cd scripts && sh build.sh",
         "buildAll": "cd scripts && sh buildAll.sh",
         "demo": "serve ./ -p 1488",
