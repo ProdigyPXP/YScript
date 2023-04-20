@@ -80,7 +80,7 @@ https://cdn.statically.io/gh/ProdigyPXP/YScript/master/dist/yscript.min.js
 </script>
 ```
 
-Полный пример можно посмотреть в файле [index.html](https://github.com/samgozman/YoptaScript/blob/master/demo/page/index.html) в директории `demo/page`. Конвертером из JavaScript в YoptaScript можно воспользоваться открыв файл [index.html](https://github.com/samgozman/YoptaScript/blob/master/demo/converter/index.html) в директории `demo/converter`.
+Полный пример можно посмотреть в файле [index.html](https://github.com/ProdigyPXP/YScript/blob/master/demo/page/index.html) в директории `demo/page`. Конвертером из JavaScript в YoptaScript можно воспользоваться открыв файл [index.html](https://github.com/ProdigyPXP/YScript/blob/master/demo/converter/index.html) в директории `demo/converter`.
 
 ### NodeJS
 
