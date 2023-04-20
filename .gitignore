@@ -1,3 +1,9 @@
+# YScript
+src/dictionary/sortedYopta.json
+# dist/
+# !dist/yscript.min.js
+
+
 # Logs
 logs
 *.log
@@ -102,7 +108,5 @@ typings/
 # TernJS port file
 .tern-port
 
-# YoptaScript
-src/dictionary/sortedYopta.json
-*dist/
-!dist/yopta.js
+# pnpm lockfile
+pnpm-lock.yaml

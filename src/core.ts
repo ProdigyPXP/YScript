@@ -1,5 +1,4 @@
-import polyfill from 'globalthis';
-import dictionary from './dictionary/sortedYopta.json';
+import dictionary from "./dictionary/sortedYopta.json";
 
 function escapeRegExp(str: string) {
     str = str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
@@ -21,9 +20,9 @@ function yoptReplaceAll(str: string, search: string, replacement: string) {
  * @param to язык текста ('ys' or 'js')
  */
 function iterateText(text: string, to: 'js' | 'ys' = 'ys') {
-    const langCol = to === 'ys' ? 1 : 0;
-    const dick = dictionary;
-    dick.sort((a, b) => {
+    const langCol = to === "ys" ? 1 : 0;
+    const Dictionary = dictionary;
+    Dictionary.sort((a, b) => {
         const al = a[langCol].length;
         const bl = b[langCol].length;
         return bl - al;
@@ -40,7 +39,7 @@ function iterateText(text: string, to: 'js' | 'ys' = 'ys') {
  * @param lang Язык строки (ys/js)
  * @returns {string} Переведённый текст
  */
-export function compile(text: string, lang: 'js' | 'ys' = 'ys'): string {
+export function compile(text: string, lang: "js" | "ys" = "ys"): string {
     /* text - текст для реплейса
      * lang - язык текста ('ys' or 'js')
      */
@@ -48,7 +47,7 @@ export function compile(text: string, lang: 'js' | 'ys' = 'ys'): string {
         [key: string]: string;
     }
     const commentRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
-    const tmpToken = 'ys_' + new Date().getTime() + '_';
+    const tmpToken = "ys_" + new Date().getTime() + "_";
     const rStringLiterals: Literals = {};
     text = text.replace(
         /\"(?:\\.|[^\"\\])*\"|\'(?:\\.|[^\'\\])*\'/g,
@@ -61,7 +60,7 @@ export function compile(text: string, lang: 'js' | 'ys' = 'ys'): string {
     const commentsArray = text.match(commentRegExp) || [];
     text = iterateText(text, lang);
     // comeback comments
-    text = text.replace(commentRegExp, () => commentsArray.shift() || '');
+    text = text.replace(commentRegExp, () => commentsArray.shift() || "");
     // comeback strings
     for (const key in rStringLiterals) {
         text = text.replace(key, rStringLiterals[key]);
@@ -69,7 +68,4 @@ export function compile(text: string, lang: 'js' | 'ys' = 'ys'): string {
     return text;
 }
 
-// YoptaScript to globals
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const globalThis = polyfill() as any;
-globalThis.yopta = compile;
+globalThis["yopta"] = compile;

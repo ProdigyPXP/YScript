@@ -44,12 +44,12 @@ YoptaScript содержит **множество нецензурной лек�
 
 ### Браузер
 
-1. Положите файл `yopta.js` из папки `dist` в папку c вашим проектом. Или используйте CDN
+1. Положите файл `yscript.min.js` из папки `dist` в папку c вашим проектом. Или используйте CDN
 2. Подключите файл к вашей `html` странице в самый конец перед закрытием тега `body`:
 
 ```html
 <body>
-    <script src="yopta.js"></script>
+    <script src="yscript.min.js"></script>
 </body>
 ```
 
@@ -62,7 +62,7 @@ YoptaScript содержит **множество нецензурной лек�
         //ваш йоптакод
     </script>
     <!-- Пример с CDN -->
-    <script src="https://cdn.jsdelivr.net/gh/samgozman/YoptaScript/dist/yopta.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ProdigyPXP/YScript/dist/yscript.min.js"></script>
 </body>
 ```
 
@@ -80,31 +80,13 @@ YoptaScript содержит **множество нецензурной лек�
 
 ### NodeJS
 
-**YoptaScript** можно так же подключить для вашего проекта с помощью пакетного менеджера **pnpm**.
+**YScript** можно так же подключить для вашего проекта с помощью пакетного менеджера **pnpm**.
 
 ```bash
-pnpm install yopta
+pnpm install @ppxp/yopta
 ```
 
-или введите `pnpm install -g yopta` чтобы установить йопту глобально.
-
-## Проекты на YoptaScript
-
-### Игра Ping-Pong
-
-Один из разработчиков языка YoptaScript написал игру Ping-Pong на чистом YoptaScript с использованием canvas!
-
-**[Pong-YoptaScript](https://github.com/grushan/Pong-YoptaScript) ([Demo](https://yopta-pong.herokuapp.com))**
-
-## Примеры
-
-См. папку examples.
-
-1. [Переменные, функции, условия](https://github.com/samgozman/YoptaScript/blob/master/examples/vars.yopta)
-2. [Циклы](https://github.com/samgozman/YoptaScript/blob/master/examples/loops.yopta)
-3. [document & window](https://github.com/samgozman/YoptaScript/blob/master/examples/document.yopta)
-4. [Math](https://github.com/samgozman/YoptaScript/blob/master/examples/math.yopta)
-5. [Логические операторы](https://github.com/samgozman/YoptaScript/blob/master/examples/logical.yopta)
+или введите `pnpm install -g @ppxp/yopta` чтобы установить йопту глобально.
 
 ## Поддержка разных диалектов
 

@@ -3,7 +3,7 @@
  */
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-require('../dist/yopta');
+require('../dist/yscript.min.js');
 const dictionary = require('../src/dictionary/sortedYopta.json');
 
 test('Компиляция из JS в YoptaScript по словам', () => {

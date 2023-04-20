@@ -7,6 +7,8 @@ export { compile as yopta };
 if (typeof window !== 'undefined') {
     //Получаем йопту из скрипта
     document.querySelectorAll('[language="YoptaScript"]').forEach(yoptaToJs);
+    document.querySelectorAll('[language="YScript"]').forEach(yoptaToJs);
+    document.querySelectorAll('[language="Yopta"]').forEach(yoptaToJs);
     document.querySelectorAll('[type="text/x-yoptascript"]').forEach(yoptaToJs);
 }
 

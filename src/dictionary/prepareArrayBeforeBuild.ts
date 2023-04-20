@@ -1,19 +1,19 @@
 // Сортирует массив по самой длинной Yopta фразе перед сборкой
-import * as fs from 'fs';
-import { dictionary } from './dictionary';
+import * as fs from "fs";
+import { dictionary } from "./dictionary";
 
 /**
  * Сортирует массив по убыванию длины Yopta перевода и сохраняет в JSON файл sortedYopta.json
- * @param dick массив 2D массивов ключей
+ * @param dictionary массив 2D массивов ключей
  */
-export const sortDictionaryToFile = (dick: string[][]): void => {
-    dick.sort((a, b) => b[1].length - a[1].length);
+export function sortDictionaryToFile (dictionary: string[][]): void {
+    dictionary.sort((a, b) => b[1].length - a[1].length);
 
-    const file = JSON.stringify(dick, null, '\t').replace(/\\/g, '');
+    const file = JSON.stringify(dictionary, null, '\t').replace(/\\/g, '');
 
-    fs.writeFile('src/dictionary/sortedYopta.json', file, function (err) {
-        if (err) return console.log(err);
-        console.log('Yopta array sorted!');
+    fs.writeFile("src/dictionary/sortedYopta.json", file, err => {
+        if (err) return console.error(err);
+        console.log("Yopta array sorted!");
     });
 };
 
