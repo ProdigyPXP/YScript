@@ -1,6 +1,6 @@
 {
     "name": "@ppxp/yopta",
-    "version": "2.1.2",
+    "version": "2.1.3",
     "description": "YSCript - язык программирования для гопников и реальных пацанов.",
     "main": "dist/yscript.min.js",
     "scripts": {
@@ -8,9 +8,9 @@
         "build": "cd scripts && sh build.sh",
         "buildAll": "cd scripts && sh buildAll.sh",
         "demo": "serve ./ -p 1488",
-        "dev": "pnpm build && pnpm demo",
+        "dev": "pnpm build dev && pnpm demo",
         "test": "jest",
-        "test-local": "pnpm build && jest --watch"
+        "test-local": "pnpm build dev && jest --watch"
     },
     "repository": {
         "type": "git",
