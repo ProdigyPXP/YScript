@@ -40,7 +40,7 @@ YoptaScript содержит **множество нецензурной лек�
 
 ## Использование
 
-Скачайте [последнюю версию](https://github.com/samgozman/YoptaScript/tree/master/dist/yopta.js) языка и следуйте дальнейшим инструкциям.
+Скачайте [последнюю версию](https://github.com/ProdigyPXP/YScript/tree/master/dist) языка и следуйте дальнейшим инструкциям.
 
 ### Браузер
 
@@ -62,8 +62,12 @@ YoptaScript содержит **множество нецензурной лек�
         //ваш йоптакод
     </script>
     <!-- Пример с CDN -->
-    <script src="https://cdn.jsdelivr.net/gh/ProdigyPXP/YScript/dist/yscript.min.js"></script>
+    <script src="https://cdn.statically.io/gh/ProdigyPXP/YScript/master/dist/yscript.min.js"></script>
 </body>
+```
+
+```url
+https://cdn.statically.io/gh/ProdigyPXP/YScript/master/dist/yscript.min.js
 ```
 
 Можно так же вынести йоптакод в отдельный файл и подключить через атрибут `src`.
