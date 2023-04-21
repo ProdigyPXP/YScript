@@ -1,4 +1,4 @@
-/* YScript v2.1.3 (dev) | Copyright (c) 2016-2023 ProdigyPXP, Yopta.Space project, and Contributors | Licensed under the MIT license */globalThis["yscript"]="dev";
+/* YScript v2.1.4 (dev) | Copyright (c) 2016-2023 ProdigyPXP, Yopta.Space project, and Contributors | Licensed under the MIT license */globalThis["yscript"]="dev";
 (() => {
   // src/dictionary/sortedYopta.json
   var sortedYopta_default = [
@@ -2892,9 +2892,7 @@
     const src = node.getAttribute("src");
     let resp = "";
     if (src !== null && src.length) {
-      const fe = await fetch(src, {
-        method: "GET"
-      });
+      const fe = await fetch(src);
       resp = await fe.text();
     }
     return resp;
