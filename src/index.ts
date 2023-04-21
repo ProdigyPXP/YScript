@@ -26,12 +26,10 @@ async function yoptaToJs(scriptNode: Element) {
 
 async function getTxtFromSrc(node: Element) {
     //Пошли искать сорцы
-    const src = node.getAttribute('src');
-    let resp = '';
+    const src = node.getAttribute("src");
+    let resp = "";
     if (src !== null && src.length) {
-        const fe = await fetch(src, {
-            method: 'GET',
-        });
+        const fe = await fetch(src);
         resp = await fe.text();
     }
     return resp;

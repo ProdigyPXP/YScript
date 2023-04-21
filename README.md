@@ -19,18 +19,10 @@ Support original author
 
 [![yoptascript logo](./docs/assets/img/Yopta2.png)](https://github.com/samgozman/YoptaScript/blob/master/CONTRIBUTE.md)
 
-## Разработка
-
-При разработке языка использовались основные лексические и фразеологические единицы диалекта "нормальных пацанов" позаимствованные из следующих словарей:
-
-* [ГСР](http://lurkmore.to/ГСР)
-* [Краткий словарь блатного жаргона](http://www.aferizm.ru/jargon/slovar.htm)
-
-Так же были заимствованы крылатые слова и выражения в ходе наблюдения за некоторыми индивидами из представителей "чётких пацанов".
-
-Толчком к разработке **YoptaScript** послужили события, произошедшие в середине 2016 года, в ходе которых журналистами Piter.TV была открыта такая категория программистов как [**гопники-программисты**](http://piter.tv/event/V_Peterburge_pyatero_studentov_kolledzha_grabili_shkol_nikov/).
-
-Вся разработка и поиск ошибок ведётся в ветке **develop**!
+## Разница с Йоптаскриптом
+- YScript использует ESBuild вместо webpack.
+- YScript доступен для много различных версий JavaScript.
+- yscript.min.js на 5kb меньше чем yopta.js
 
 ## Предупреждения
 
