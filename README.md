@@ -1,9 +1,9 @@
 # YScript
 ### A flavor of [YoptaScript](https://github.com/samgozman/YoptaScript) maintained by [ProdigyPXP](https://github.com/ProdigyPXP)
 
-[![yoptascript logo](./docs/assets/img/YoptaScript.png)](https://yopta.space/)
+[![YoptaScript thumbnail](./docs/assets/img/YoptaScript.png)](https://yopta.space/)
 
-Support original author
+Support the original author of YoptaScript: 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C1DI4VL)
 
 [![yoptascript](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-YoptaScript-green?style=for-the-badge)](https://github.com/samgozman/YoptaScript/tree/master/dist/yopta.js)
@@ -19,16 +19,16 @@ Support original author
 
 [![yoptascript logo](./docs/assets/img/Yopta2.png)](https://github.com/samgozman/YoptaScript/blob/master/CONTRIBUTE.md)
 
-## Разница с Йоптаскриптом
-- YScript использует ESBuild вместо webpack.
-- YScript доступен для много различных версий JavaScript.
-- yscript.min.js на 5kb меньше чем yopta.js
+## Разница YScript с Йоптаскриптом
+- YScript использует [ESBuild](https://esbuild.github.io) вместо [webpack](https://github.com/webpack/webpack/issues/5032).
+- YScript доступен для [много различных версий JavaScript](https://github.com/ProdigyPXP/YScript/tree/master/dist).
+- [yscript.min.js](https://github.com/ProdigyPXP/YScript/blob/master/dist/yscript.min.js) на 5kb меньше чем [yopta.js](https://github.com/samgozman/YoptaScript/blob/master/dist/yopta.js)
 
 ## Предупреждения
 
-YoptaScript не несёт в себе цели оскорбить кого-то или унизить. YoptaScript создан для облегчения обучению программированию определённых слоёв населения.
+YScript не несёт в себе цели оскорбить кого-то или унизить. YScript создан для облегчения обучению программированию определённых слоёв населения.
 
-YoptaScript содержит **множество нецензурной лексики**.
+YScript содержит **множество нецензурной лексики**.
 
 ## Использование
 
@@ -78,7 +78,7 @@ https://cdn.statically.io/gh/ProdigyPXP/YScript/master/dist/yscript.min.js
 
 **YScript** можно так же подключить для вашего проекта с помощью пакетного менеджера **pnpm**.
 
-```bash
+```sh
 pnpm install @ppxp/yopta
 ```
 
@@ -86,7 +86,7 @@ pnpm install @ppxp/yopta
 
 ## Поддержка разных диалектов
 
-YoptaScript отлично работает с разными локальными диалектами!
+**YScript** отлично работает с разными локальными диалектами!
 
 Например:
 
