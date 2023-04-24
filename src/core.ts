@@ -68,4 +68,17 @@ export function compile(text: string, lang: "js" | "ys" = "ys"): string {
     return text;
 }
 
-globalThis["yopta"] = compile;
+
+globalThis["yopta"] = (text : string, lang : "js" | "ys" = "ys") => {
+    console.warn(
+        "globalThis.yopta() is deprecated and may be removed soon.\n" + 
+        "Use globalThis.yscript.compile() instead."
+    );
+    console.warn(
+        "globalThis.yopta() устарел и скоро может быть удален.\n" + 
+        "Вместо этого используйте globalThis.yscript.compile()."
+    );
+    return compile(text, lang);
+};
+
+globalThis["yscript"]["compile"] = compile;

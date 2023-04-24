@@ -1,7 +1,9 @@
 import { compile } from './core';
+import "./yscript/imp";
 
 // Экспорт для модуля
-export { compile as yopta };
+const yscript = compile;
+export default yscript;
 
 // Поиск скриптов при работе из браузера
 if (typeof window !== 'undefined') {
@@ -12,7 +14,7 @@ if (typeof window !== 'undefined') {
     document.querySelectorAll('[type="text/x-yoptascript"]').forEach(yoptaToJs);
 }
 
-async function yoptaToJs(scriptNode: Element) {
+export async function yoptaToJs(scriptNode: Element) {
     if (scriptNode.parentNode !== null) {
         //Получаем йопту из скрипта
         const yoptaText: string =
@@ -24,7 +26,7 @@ async function yoptaToJs(scriptNode: Element) {
     }
 }
 
-async function getTxtFromSrc(node: Element) {
+export async function getTxtFromSrc(node: Element) {
     //Пошли искать сорцы
     const src = node.getAttribute("src");
     let resp = "";
@@ -35,7 +37,7 @@ async function getTxtFromSrc(node: Element) {
     return resp;
 }
 
-function addScriptNode(compiled: string) {
+export function addScriptNode(compiled: string) {
     const script = document.createElement('script');
     script.innerHTML = compiled;
     document.body.appendChild(script);

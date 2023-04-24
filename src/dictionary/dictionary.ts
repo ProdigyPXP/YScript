@@ -1,7 +1,13 @@
+import ys_dictionary from "./yscript-dictionary";
+
 /* Изначально массив элементов у нас не отсортирован.
  * Любые правки по словарю языка  пишем сюда!
+ *
  */
-export const dictionary = [
+const dictionary = [
+
+    ...ys_dictionary, // YScript dictionary
+
     ['break', 'харэ'],
     ['case', 'лещ'],
     ['case', 'аеслинайду'],
@@ -743,3 +749,5 @@ export const dictionary = [
     ['export', 'предъявa'],
     ['global', 'общак'],
 ];
+
+export default dictionary;

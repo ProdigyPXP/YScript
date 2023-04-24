@@ -1,6 +1,6 @@
 // Сортирует массив по самой длинной Yopta фразе перед сборкой
 import * as fs from "fs";
-import { dictionary } from "./dictionary";
+import dictionary from "./dictionary";
 
 /**
  * Сортирует массив по убыванию длины Yopta перевода и сохраняет в JSON файл sortedYopta.json

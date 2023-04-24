@@ -1,6 +1,6 @@
 {
     "name": "@ppxp/yopta",
-    "version": "2.1.5",
+    "version": "2.2.0",
     "description": "YSCript - язык программирования для гопников и реальных пацанов.",
     "main": "dist/yscript.min.js",
     "scripts": {
