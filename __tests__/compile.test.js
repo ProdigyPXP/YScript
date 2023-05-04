@@ -16,7 +16,7 @@ test('Компиляция из JS в YoptaScript по словам', () => {
     // Проверка каждого перевода на вхождение в список синонимов
     for (const element of dictionary) {
         const js = element[0];
-        const ys = global.yopta(js, 'js');
+        const ys = global.yscript.compile(js, 'js');
         expect(synonims(js)).toContain(ys);
     }
 });
@@ -24,7 +24,7 @@ test('Компиляция из JS в YoptaScript по словам', () => {
 test('Компиляция из YS в JavaScript по словам', () => {
     for (const element of dictionary) {
         const ys = element[1];
-        const js = global.yopta(ys, 'ys');
+        const js = global.yscript.compile(ys, 'ys');
         expect(js).toBe(element[0]);
     }
 });

@@ -1,6 +1,3 @@
-cd ..
-pnpm i
-
 cd scripts
 sh build.sh dev
 sh dryBuild.sh es2016

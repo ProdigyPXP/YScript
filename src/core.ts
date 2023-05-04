@@ -68,4 +68,19 @@ export function compile(text: string, lang: "js" | "ys" = "ys"): string {
     return text;
 }
 
-globalThis["yopta"] = compile;
+/**
+ * @deprecated Support will be removed in YScript 0.3.0
+ */
+function deprecatedYopta (text : string, lang: "js" | "ys" = "ys") {
+    
+    console.warn(
+        "yopta() is deprecated and support will be removed soon.\n",
+        "Use yscript.compile() instead.",
+        "Deprecated as of YScript 0.2.0- support will be removed in YScript 0.3.0"
+    );
+
+    return compile(text, lang);
+}
+
+global["yscript"]["compile"] = compile;
+global["yopta"] = deprecatedYopta;

@@ -1,5 +1,5 @@
 // @ts-check
-if (!process.argv[2]) {
+if (!process.argv[2]) { // don't waste time on this script if there's no distro
   console.error("\nBuild failed.")
   console.error("You must provide a build target (ex. pnpm build esnext).")
   process.exit(0);
@@ -23,7 +23,8 @@ let build = true;
 
 const banner = {
   js: `/* YScript v${version} (${distro}) | Copyright (c) 2016-${new Date().getFullYear()} ProdigyPXP, Yopta.Space project, and Contributors | Licensed under the MIT license */` + 
-    `globalThis["yscript"]="${distro}";`,
+    `global["yscript"]=Object.create(null);` + 
+    `global["yscript"]["distro"]="${distro}";`,
   css: ""
 };
 const bundle = true;
