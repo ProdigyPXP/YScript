@@ -23,8 +23,9 @@ let build = true;
 
 const banner = {
   js: `/* YScript v${version} (${distro}) | Copyright (c) 2016-${new Date().getFullYear()} ProdigyPXP, Yopta.Space project, and Contributors | Licensed under the MIT license */` + 
-    `global["yscript"]=Object.create(null);` + 
-    `global["yscript"]["distro"]="${distro}";`,
+    `globalThis["yscript"]=Object.create(null);` + 
+    `globalThis["yscript"]["distro"]="${distro}";` +
+    `globalThis["yscript"]["version"]="${version}";`,
   css: ""
 };
 const bundle = true;

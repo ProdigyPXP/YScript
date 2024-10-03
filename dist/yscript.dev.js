@@ -1,4 +1,4 @@
-/* YScript v2.1.5 (dev) | Copyright (c) 2016-2023 ProdigyPXP, Yopta.Space project, and Contributors | Licensed under the MIT license */globalThis["yscript"]="dev";
+/* YScript v2.2.1 (dev) | Copyright (c) 2016-2024 ProdigyPXP, Yopta.Space project, and Contributors | Licensed under the MIT license */globalThis["yscript"]=Object.create(null);globalThis["yscript"]["distro"]="dev";globalThis["yscript"]["version"]="2.2.1";
 (() => {
   // src/dictionary/sortedYopta.json
   var sortedYopta_default = [
@@ -2872,7 +2872,16 @@
     }
     return text;
   }
-  globalThis["yopta"] = compile;
+  function deprecatedYopta(text, lang = "ys") {
+    console.warn(
+      "yopta() is deprecated and support will be removed soon.\n",
+      "Use yscript.compile() instead.",
+      "Deprecated as of YScript 0.2.0- support will be removed in YScript 0.3.0"
+    );
+    return compile(text, lang);
+  }
+  globalThis["yscript"]["compile"] = compile;
+  globalThis["yopta"] = deprecatedYopta;
 
   // src/index.ts
   if (typeof window !== "undefined") {

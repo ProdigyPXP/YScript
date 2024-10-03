@@ -1,6 +1,6 @@
 {
     "name": "@ppxp/yopta",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "description": "YSCript - язык программирования для гопников и реальных пацанов.",
     "main": "dist/yscript.min.js",
     "scripts": {
@@ -29,14 +29,14 @@
     },
     "homepage": "https://github.com/ProdigyPXP/YScript",
     "devDependencies": {
-        "@types/jest": "^29.5.1",
-        "@types/node": "^18.16.3",
-        "esbuild": "^0.17.18",
-        "jest": "^29.5.0",
-        "jest-environment-jsdom": "^29.5.0",
-        "serve": "^14.2.0",
-        "ts-node": "^10.9.1",
-        "typescript": "^5.0.4"
+        "@types/jest": "^29.5.13",
+        "@types/node": "^18.19.54",
+        "esbuild": "^0.17.19",
+        "jest": "^29.7.0",
+        "jest-environment-jsdom": "^29.7.0",
+        "serve": "^14.2.3",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.6.2"
     },
     "files": [
         "dist/**/*"

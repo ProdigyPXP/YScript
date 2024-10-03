@@ -82,5 +82,5 @@ function deprecatedYopta (text : string, lang: "js" | "ys" = "ys") {
     return compile(text, lang);
 }
 
-global["yscript"]["compile"] = compile;
-global["yopta"] = deprecatedYopta;
+globalThis["yscript"]["compile"] = compile;
+globalThis["yopta"] = deprecatedYopta;
