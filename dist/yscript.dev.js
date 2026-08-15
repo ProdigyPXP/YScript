@@ -1,4 +1,4 @@
-/* YScript v2.2.1 (dev) | Copyright (c) 2016-2024 ProdigyPXP, Yopta.Space project, and Contributors | Licensed under the MIT license */globalThis["yscript"]=Object.create(null);globalThis["yscript"]["distro"]="dev";globalThis["yscript"]["version"]="2.2.1";
+/* YScript v2.2.1 (dev) | Copyright (c) 2016-2026 ProdigyPXP, Yopta.Space project, and Contributors | Licensed under the MIT license */globalThis["yscript"]=Object.create(null);globalThis["yscript"]["distro"]="dev";globalThis["yscript"]["version"]="2.2.1";
 (() => {
   // src/dictionary/sortedYopta.json
   var sortedYopta_default = [
@@ -681,6 +681,10 @@
     [
       "profileEnd",
       "\u0432\u041B\u0438\u0447\u043A\u0443\u041F\u0440\u043E\u043F\u0438\u0441\u0430\u043B\u0438"
+    ],
+    [
+      "toReversed",
+      "\u0442\u0430\u043A\u043E\u0433\u043E\u0416\u0435\u041D\u043E\u0420\u0430\u043A\u043E\u043C"
     ],
     [
       "constructor",
@@ -1423,6 +1427,14 @@
       "\u043F\u0435\u0440\u0432\u044B\u0439\u0411\u0430\u0447\u043E\u043A"
     ],
     [
+      "toSpliced",
+      "\u0434\u0430\u0439\u0413\u043E\u0432\u043D\u043E\u0451\u0431\u0430"
+    ],
+    [
+      "toSpliced",
+      "\u0434\u0430\u0439\u0413\u043E\u0432\u043D\u043E\u0435\u0431\u0430"
+    ],
+    [
       "some",
       "\u043D\u0430\u0440\u044B\u0432\u0430\u0435\u0448\u044C\u0441\u044F"
     ],
@@ -1863,6 +1875,10 @@
       "\u0432\u043F\u0438\u0441\u0430\u0442\u044C\u0441\u044F"
     ],
     [
+      "toSorted",
+      "\u0434\u0430\u0439\u0421\u0438\u0434\u043E\u0440\u0430"
+    ],
+    [
       "LN2",
       "\u0413\u041E\u041F\u041E\u0420\u0418\u0424\u041C2"
     ],
@@ -2104,7 +2120,7 @@
     ],
     [
       "export",
-      "\u043F\u0440\u0435\u0434\u044A\u044F\u0432a"
+      "\u043F\u0440\u0435\u0434\u044A\u044F\u0432\u0430"
     ],
     [
       "debugger",
@@ -2853,8 +2869,17 @@
     return text;
   }
   function compile(text, lang = "ys") {
-    const commentRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
     const tmpToken = "ys_" + (/* @__PURE__ */ new Date()).getTime() + "_";
+    const rJsxTextLiterals = {};
+    text = text.replace(
+      /(<[A-Za-z][^>]*>)([\s\S]+?)(?=<\/[A-Za-z])/g,
+      (_, openTag, content, offset) => {
+        const key = tmpToken + "jsx_" + offset;
+        rJsxTextLiterals[key] = content;
+        return openTag + key;
+      }
+    );
+    const commentRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
     const rStringLiterals = {};
     text = text.replace(
       /\"(?:\\.|[^\"\\])*\"|\'(?:\\.|[^\'\\])*\'/g,
@@ -2869,6 +2894,9 @@
     text = text.replace(commentRegExp, () => commentsArray.shift() || "");
     for (const key in rStringLiterals) {
       text = text.replace(key, rStringLiterals[key]);
+    }
+    for (const key in rJsxTextLiterals) {
+      text = text.replace(key, rJsxTextLiterals[key]);
     }
     return text;
   }

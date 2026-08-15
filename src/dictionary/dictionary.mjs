@@ -633,7 +633,11 @@ export const dictionary = [
     ['reverse', 'шухильмеМухильме'],
     ['shift', 'первыйБачок'],
     ['splice', 'въебатьГовна'],
+    ['toSpliced', 'дайГовноёба'],
+    ['toSpliced', 'дайГовноеба'],
     ['sort', 'сидор'],
+    ['toSorted', 'дайСидора'],
+    ['toReversed', 'такогоЖеНоРаком'],
     ['some', 'нарываешься'],
     ['unshift', 'верниБачок'],
     ['values', 'валиоси'],
@@ -740,6 +744,6 @@ export const dictionary = [
     //    NodeJS/modules support
     ['module', 'братва'],
     ['exports', 'предъявляет'],
-    ['export', 'предъявa'],
+    ['export', 'предъява'],
     ['global', 'общак'],
 ];

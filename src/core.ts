@@ -46,8 +46,20 @@ export function compile(text: string, lang: "js" | "ys" = "ys"): string {
     interface Literals {
         [key: string]: string;
     }
-    const commentRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
     const tmpToken = "ys_" + new Date().getTime() + "_";
+
+    // stash away JSX text content so the dictionary doesn't mangle it
+    const rJsxTextLiterals: Literals = {};
+    text = text.replace(
+        /(<[A-Za-z][^>]*>)([\s\S]+?)(?=<\/[A-Za-z])/g,
+        (_, openTag, content, offset) => {
+            const key = tmpToken + "jsx_" + offset;
+            rJsxTextLiterals[key] = content;
+            return openTag + key;
+        }
+    );
+
+    const commentRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
     const rStringLiterals: Literals = {};
     text = text.replace(
         /\"(?:\\.|[^\"\\])*\"|\'(?:\\.|[^\'\\])*\'/g,
@@ -64,6 +76,10 @@ export function compile(text: string, lang: "js" | "ys" = "ys"): string {
     // comeback strings
     for (const key in rStringLiterals) {
         text = text.replace(key, rStringLiterals[key]);
+    }
+    // comeback jsx
+    for (const key in rJsxTextLiterals) {
+        text = text.replace(key, rJsxTextLiterals[key]);
     }
     return text;
 }
